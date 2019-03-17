@@ -7,8 +7,13 @@
  * lordOfTheRings('One Does Not Simply Walk into Mordor');    // 12;
  * */
 
-const lordOfTheRings = () => {
-
+const lordOfTheRings = (str) => {
+  let ones = 'dbpeaAoOgPDqRQ';
+  const splitted = str.split('');
+  return (
+    (splitted.filter((char) => ones.indexOf(char) > -1) || []).length +
+    (splitted.filter((char) => char === 'B') || []).length * 2
+  );
 };
 
 

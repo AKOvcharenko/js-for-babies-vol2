@@ -10,7 +10,7 @@ describe('lordOfTheRings', () => {
   });
 
   it('should return a number', () => {
-    expect(typeof lordOfTheRings()).toBe('number');
+    expect(typeof lordOfTheRings('')).toBe('number');
   });
 
   it('should returns proper number', () => {
