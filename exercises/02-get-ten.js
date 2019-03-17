@@ -6,7 +6,12 @@
  * getTen();    // 10;
  * */
 
-const getTen = (arr) => {
+const getTen = () => {
+  for (let i = 0; i < 11; i += 0.2) {
+    if ( Math.round(i * 100) / 100 === 10) {
+      return 10;
+    }
+  }
 };
 
 
