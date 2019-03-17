@@ -6,7 +6,11 @@
  * uniqueOnly(['a', 'b', 'c', 'a', 'b', 'c']); // ['a', 'b', 'c'];
  * */
 
-const uniqueOnly = () => {};
+const uniqueOnly = (arr) => {
+  return arr.filter((el, index) => {
+    return arr.indexOf(el) === index;
+  });
+};
 
 
 module.exports = uniqueOnly;
