@@ -8,7 +8,14 @@
  * missingNumber([4, 2, 3]) => 1
  * */
 
-const missingNumber = () => {
+const missingNumber = (array) => {
+  const sorted = array.sort((a, b) => a > b ? 1 : -1);
+  const missed = sorted.reduce((result, curr, index) => {
+    if(result) return result;
+    return index + 1 === curr ? result : index + 1;
+  }, 0);
+
+  return missed || array.length + 1;
 };
 
 
