@@ -14,7 +14,7 @@ describe('missingNumber', () => {
   });
 
   it('should returns proper number easy case', () => {
-    expect(typeof stack([(arg) => arg + 1 ], 0)).toBe(1);
+    expect(stack([(arg) => arg + 1 ], 0)).toBe(1);
   });
 
   it('should returns proper number max case', () => {
