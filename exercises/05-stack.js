@@ -20,7 +20,11 @@
  * ) // 10
  * */
 
-const stack = (array, startArg) => {};
+const stack = (array, startArg) => {
+  return array.reduceRight((result, curr) => {
+    return curr(result);
+  }, startArg)
+};
 
 
 module.exports = stack;
